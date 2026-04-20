@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Switcher</title>
+
+  <style>
+    #myImage {
+      width: 300px;
+      height: 300px;
+      object-fit: cover; /* keeps image nicely fitted */
+    }
+  </style>
+</head>
+<body>
+
+<img id="myImage" 
+     src="https://i.guim.co.uk/img/media/d71ecdbda5e2b7dd27fd6315ffba1486377acd10/25_168_2446_1467/master/2446.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d8bd9a0a9b3716cad244ca9f3595c63f">
+
+<br><br>
+<button onclick="switchImage()">Switch Image</button>
+
+<script>
+  function switchImage() {
+    let img = document.getElementById("myImage");
+
+    let image1 = "https://i.guim.co.uk/img/media/d71ecdbda5e2b7dd27fd6315ffba1486377acd10/25_168_2446_1467/master/2446.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d8bd9a0a9b3716cad244ca9f3595c63f";
+    let image2 = "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201812/Kohli_5.png";
+
+    if (img.src === image1) {
+      img.src = image2;
+    } else {
+      img.src = image1;
+    }
+  }
+</script>
+
+</body>
+</html>
