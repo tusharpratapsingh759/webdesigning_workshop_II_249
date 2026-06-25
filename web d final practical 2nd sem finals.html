@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Number Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 100px;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Largest Number Finder</h1>
+
+    <input type="number" id="n1" placeholder="Number 1"><br>
+    <input type="number" id="n2" placeholder="Number 2"><br>
+    <input type="number" id="n3" placeholder="Number 3"><br>
+    <input type="number" id="n4" placeholder="Number 4"><br>
+    <input type="number" id="n5" placeholder="Number 5"><br>
+
+    <button onclick="findLargest()">Find Largest</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function findLargest() {
+
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            let c = Number(document.getElementById("n3").value);
+            let d = Number(document.getElementById("n4").value);
+            let e = Number(document.getElementById("n5").value);
+
+            let largest;
+
+            if (a >= b && a >= c && a >= d && a >= e) {
+                largest = a;
+            }
+            else if (b >= a && b >= c && b >= d && b >= e) {
+                largest = b;
+            }
+            else if (c >= a && c >= b && c >= d && c >= e) {
+                largest = c;
+            }
+            else if (d >= a && d >= b && d >= c && d >= e) {
+                largest = d;
+            }
+            else {
+                largest = e;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Largest Number is: " + largest;
+        }
+    </script>
+
+</body>
+</html>
